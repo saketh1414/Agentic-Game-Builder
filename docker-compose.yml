@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  agentic-game-builder:
+    build: .
+    image: agentic-game-builder:latest
+    container_name: agentic-game-builder
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./generated_game:/app/generated_game
+    tty: true # keep container running for interactive prompts
+    stdin_open: true
+    command: ["python", "main.py"]
