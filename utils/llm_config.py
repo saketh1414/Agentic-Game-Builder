@@ -14,7 +14,7 @@ def get_llm() -> LLM:
 
     Or replace the string below directly (not recommended for production).
     """
-    api_key = os.environ.get("GEMINI_API_KEY", "AIzaSyAiUOL2kqI_v-aBsFg7DG-boFAb3hv7go8")
+    api_key = os.environ.get("GEMINI_API_KEY", "Enter your API KEY here")
 
     return LLM(
         model="gemini/gemini-2.5-pro",  # Most powerful model — swap to gemini-2.0-flash for faster response
